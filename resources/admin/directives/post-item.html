@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-image">
+        <img src="{{ post.thumb }}">
+        <span class="card-title">{{ post.name }}</span>
+    </div>
+    <div class="card-action">
+        <a ui-sref="viewState({alias: post._id})">{{ post.description }}</a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<!--start trend-->
+<h4><i class="material-icons dp48">description</i> Nổi bật</h4>
+<div class="row">
+    <div class="col s12 m4" ng-repeat="trend_post in  trending_posts">
+        <post-item post="trend_post"></post-item>
+    </div>
+</div>
+<p class="center-align"><a class="waves-effect waves-light btn red">Xem tất cả</a></p>
+<!--end trend-->
+
+<!--start new post-->
+<h4 ng-init="loadNewPost()"><i class="material-icons dp48">description</i> Bài viết mới</h4>
+<div class="row">
+    <div class="col s12 m4" ng-repeat="new_post in  new_posts">
+        <post-item post="new_post"></post-item>
+    </div>
+</div>
+<p class="center-align"><a class="waves-effect waves-light btn red">Xem tất cả</a></p>
+<!--/end new post-->

@@ -1,0 +1,64 @@
+<div class="progress" ng-show="post == null">
+    <div class="indeterminate"></div>
+</div>
+
+<div ng-show="post != null">
+    <!--start trend-->
+    <div class="row" ng-init="view()">
+        <h4><i class="material-icons dp48">description</i> {{ post.name}}</h4>
+        <div class="col s12">
+            {{ post.content}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="chip" ng-repeat="tag in post.tags"><a ui-sref="tagState({alias: tag.href})">{{ tag.title }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="progress" ng-show="post == null">
+    <div class="indeterminate"></div>
+</div>
+<!--start new post-->
+<div class="row"  ng-show="post_related != null">
+    <h4><i class="material-icons dp48">description</i> Liên quan</h4>
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/publics/assets/img/bg-masthead.jpg">
+                <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/publics/assets/img/bg-masthead.jpg">
+                <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/publics/assets/img/bg-masthead.jpg">
+                <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-action">
+                <a href="#">This is a link</a>
+            </div>
+        </div>
+    </div>
+    <p class="center-align"><a class="waves-effect waves-light btn red">Xem tất cả</a></p>
+</div>
+<!--/end new post-->

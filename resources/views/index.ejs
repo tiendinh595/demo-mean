@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/publics/assets/css/materialize.min.css" media="screen,projection"/>
+    <script type="text/javascript" src="/publics/assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="/publics/assets/js/angular-ui-router.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+</head>
+<body>
+<div ng-include="'/publics/client/partial/includes/header.html'"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8">
+            <ui-view></ui-view>
+        </div>
+        <div class="col s12 m4">
+            <h4><i class="material-icons dp48">code</i> Chuyên mục</h4>
+            <ul class="collection">
+                <li class="collection-item">Lập trình web <span class="new badge" data-badge-caption="">4</span></li>
+                <li class="collection-item">Thiết kế <span class="new badge" data-badge-caption="">4</span></li>
+                <li class="collection-item">Lập trình mobile <span class="new badge" data-badge-caption="">4</span></li>
+                <li class="collection-item">Lập trình game <span class="new badge" data-badge-caption="">4</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div ng-include="'/publics/client/partial/includes/footer.html'"></div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/publics/assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="/publics/client/app.js"></script>
+<script type="text/javascript" src="/publics/client/router.js"></script>
+<script type="text/javascript" src="/publics/client/directives/post-item.js"></script>
+<script type="text/javascript" src="/publics/client/controller/MainController.js"></script>
+<script type="text/javascript" src="/publics/client/controller/PostController.js"></script>
+<script type="text/javascript" src="/publics/client/controller/TagController.js"></script>
+<script type="text/javascript" src="/publics/assets/js/script.js"></script>
+</body>
+</html>

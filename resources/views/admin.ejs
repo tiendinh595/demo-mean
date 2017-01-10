@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description"
+          content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords"
+          content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>{{ title }}</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CORE CSS-->
+    <link href="/publics/assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="/publics/assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="/publics/assets/css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="/publics/assets/js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="/publics/assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet"
+          media="screen,projection">
+    <link href="/publics/assets/js/plugins/jvectormap/jquery-jvectormap.css" type="text/css" rel="stylesheet"
+          media="screen,projection">
+    <link href="/publics/assets/js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet"
+          media="screen,projection">
+
+    <link href="/publics/assets/plugin/toastr/toastr.min.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="/publics/assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="/publics/assets/js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/publics/assets/js/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="/publics/assets/js/ng-file-upload-all.min.js"></script>
+    <script type="text/javascript" src="/publics/assets/js/angular-materialize.js"></script>
+</head>
+
+<body>
+<!-- Start Page Loading -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Page Loading -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START HEADER -->
+<header id="header" class="page-topbar">
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="navbar-color">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li><h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img
+                            src="/publics/assets/images/materialize-logo.png" alt="materialize logo"></a> <span
+                            class="logo-text">Materialize</span></h1></li>
+                </ul>
+                <div class="header-search-wrapper hide-on-med-and-down">
+                    <i class="mdi-action-search"></i>
+                    <input type="text" name="Search" class="header-search-input z-depth-2"
+                           placeholder="Explore Materialize"/>
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i
+                            class="mdi-action-settings-overscan"></i></a>
+                    </li>
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button"
+                           data-activates="notifications-dropdown"><i class="mdi-social-notifications">
+                        <small class="notification-badge">5</small>
+                    </i>
+
+                    </a>
+                    </li>
+                </ul>
+
+                <!-- notifications-dropdown -->
+                <ul id="notifications-dropdown" class="dropdown-content">
+                    <li>
+                        <h5>NOTIFICATIONS <span class="new badge">5</span></h5>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#!"><i class="mdi-action-add-shopping-cart"></i> A new order has been placed!</a>
+                        <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end header nav-->
+</header>
+<!-- END HEADER -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START MAIN -->
+<div id="main">
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+        <!-- START LEFT SIDEBAR NAV-->
+        <aside id="left-sidebar-nav">
+            <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                    <div class="row">
+                        <div class="col col s4 m4 l4">
+                            <img src="/publics/assets/images/avatar.jpg" alt=""
+                                 class="circle responsive-img valign profile-image">
+                        </div>
+                        <div class="col col s8 m8 l8">
+                            <ul id="profile-dropdown" class="dropdown-content">
+                                <li><a href="#"><i class="mdi-action-face-unlock"></i> Profile</a>
+                                </li>
+                                <li><a href="#"><i class="mdi-action-settings"></i> Settings</a>
+                                </li>
+                                <li><a href="#"><i class="mdi-communication-live-help"></i> Help</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#"><i class="mdi-action-lock-outline"></i> Lock</a>
+                                </li>
+                                <li><a href="#"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                                </li>
+                            </ul>
+                            <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#"
+                               data-activates="profile-dropdown">{{ admin.name }}<i
+                                    class="mdi-navigation-arrow-drop-down right"></i></a>
+                            <p class="user-roal">Administrator</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bold active"><a ui-sref="dashboard" class="waves-effect waves-cyan"><i
+                        class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i
+                                class="mdi-action-view-carousel"></i> Bài viết</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a ui-sref="listPost">Tất cả bài viết</a>
+                                    </li>
+                                    <li><a ui-sref="addPost">Thêm mới</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <a href="#" data-activates="slide-out"
+               class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i
+                    class="mdi-navigation-menu"></i></a>
+        </aside>
+        <!-- END LEFT SIDEBAR NAV-->
+
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        <!-- START CONTENT -->
+        <section id="content">
+
+            <!--start container-->
+            <div class="container">
+                <ui-view></ui-view>
+            </div>
+        </section>
+
+
+    </div>
+    <!-- END WRAPPER -->
+
+</div>
+<!-- END MAIN -->
+
+<!-- END FOOTER -->
+
+
+<!-- ================================================
+Scripts
+================================================ -->
+<script type="text/javascript" src="/publics/admin/app.js"></script>
+<script type="text/javascript" src="/publics/admin/router.js"></script>
+<!-- jQuery Library -->
+<script type="text/javascript" src="/publics/assets/js/plugins/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/publics/assets/plugin/toastr/toastr.min.js"></script>
+
+<!--materialize js-->
+<script type="text/javascript" src="/publics/assets/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="/publics/assets/js/plugins/prism/prism.js"></script>
+<!--scrollbar-->
+<script type="text/javascript" src="/publics/assets/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+<script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script type="text/javascript" src="/publics/assets/js/plugins.min.js"></script>
+<!--custom-script.js - Add your own theme custom JS-->
+<script type="text/javascript" src="/publics/assets/js/custom-script.js"></script>
+
+<!--laod controller-->
+<script type="text/javascript" src="/publics/admin/controller/AdminController.js"></script>
+<script type="text/javascript" src="/publics/admin/controller/MainController.js"></script>
+<script type="text/javascript" src="/publics/admin/controller/PostController.js"></script>
+
+<!-- Toast Notification -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    })
+</script>
+</body>
+
+
+<!-- Mirrored from demo.geekslabs.com/materialize/v3.1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2017 02:32:16 GMT -->
+</html>

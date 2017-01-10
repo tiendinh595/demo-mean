@@ -1,0 +1,63 @@
+<div id="basic-form" class="section" ng-init="getAllCate()">
+    <div class="row">
+        <div class="col s12">
+            <div class="card-panel">
+                <h4 class="header2">Thêm bài viết mới</h4>
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" type="text" name="" ng-model="post.name">
+                                <label class="">Tên bài viết</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select style="display: block;" ng-model="post.category">
+                                    <option value="" disabled selected>Chuyên mục</option>
+                                    <option ng-repeat="cate in categories" value="{{ cate._id }}">{{ cate.name }}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea class="materialize-textarea" ng-model="post.description"></textarea>
+                                <label class="">Mô tả</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="message" class="materialize-textarea" ng-model="post.content"></textarea>
+                                <label for="message">Nội dung</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="file" ngf-select="onChaneFile($files)" ng-model="file" name="file" ngf-pattern="'image/*'"
+                                     ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"
+                                     ngf-resize="{width: 100, height: 100}" />
+                                <label class="active">Ảnh mô tả</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <button class="btn cyan waves-effect waves-light right" type="submit" ng-click="add()" name="action">Lưu
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
